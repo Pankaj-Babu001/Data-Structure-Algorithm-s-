@@ -60,7 +60,7 @@ flowchart TD
     PComp -->|No| PLeft["curr = curr.left"]
     PUpd --> PEmpty
     PLeft --> PEmpty
-    PEmpty -->|Yes| End([Return {pre, suc}])
+    PEmpty -->|Yes| End(["Return {pre, suc}"])
 ```
 
 ---
