@@ -50,11 +50,11 @@ flowchart TD
     Add --> CheckM{"j-1-m >= 0?"}
     CheckM -->|Yes| Sub["windowSum -= prev[j-1-m]"]
     CheckM -->|No| NextX
-    Sub --> NextX["curr[j] = windowSum"]
-    NextX --> LoopX
+    Sub --> NextX
+    NextX["curr[j] = windowSum"] --> LoopX
     LoopX -->|Done| Update["prev = curr"]
     Update --> LoopN
-    LoopN -->|Done| End([Return prev[x]])
+    LoopN -->|Done| End(["Return prev[x]"])
 ```
 
 ---
