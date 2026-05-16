@@ -42,10 +42,10 @@ flowchart TD
     Prefix --> Suffix["Build rightMax[]: \n rightMax[i] = max(arr[i..N-1])"]
     Suffix --> Loop["For j from 1 to N-2"]
     Loop --> Cond{"leftMin[j-1] < arr[j] \n AND \n arr[j] < rightMax[j+1]?"}
-    Cond -->|Yes| Found[Return {leftMin[j-1], arr[j], rightMax[j+1]}]
+    Cond -->|Yes| Found["Return {leftMin[j-1], arr[j], rightMax[j+1]}"]
     Cond -->|No| Next[j++]
     Next --> Loop
-    Loop -->|Done| Empty[Return empty array]
+    Loop -->|Done| Empty["Return empty array"]
     Found --> End([End])
     Empty --> End
 ```
