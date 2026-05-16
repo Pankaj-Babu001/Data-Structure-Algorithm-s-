@@ -53,7 +53,7 @@ flowchart TD
     Inner --> Update["dp[j] = (dp[j] + dp[j - num]) % MOD"]
     Update --> Inner
     Inner -->|Done| Loop
-    Loop -->|Done| End([Return dp[target]])
+    Loop -->|Done| End(["Return dp[target]"])
 ```
 
 ---
