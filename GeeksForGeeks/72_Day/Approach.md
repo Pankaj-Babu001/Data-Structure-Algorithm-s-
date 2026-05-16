@@ -50,8 +50,8 @@ flowchart TD
     Compare -->|Equal| Match["Distinct check: \n result.back() != a[i]?"]
     Match -->|Yes| Push["Add a[i] to result \n i++, j++"]
     Match -->|No| Skip["i++, j++"]
-    Compare -->|a[i] < b[j]| IncI["i++"]
-    Compare -->|a[i] > b[j]| IncJ["j++"]
+    Compare -->|"a[i] < b[j]"| IncI["i++"]
+    Compare -->|"a[i] > b[j]"| IncJ["j++"]
     Push --> Loop
     Skip --> Loop
     IncI --> Loop
