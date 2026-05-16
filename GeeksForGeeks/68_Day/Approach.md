@@ -54,7 +54,7 @@ flowchart TD
     Inner --> Update["dp[j] += dp[j - x]"]
     Update --> Inner
     Inner -->|Done| Loop
-    Loop -->|Done| End([Return dp[P]])
+    Loop -->|Done| End(["Return dp[P]"])
 ```
 
 ---
