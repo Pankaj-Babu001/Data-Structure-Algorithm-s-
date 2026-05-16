@@ -59,7 +59,7 @@ flowchart TD
     EqualDist -->|No| NextN
     NextN --> Neighbors
     Neighbors -->|Done| While
-    While -->|Yes| End([Return ways[V-1]])
+    While -->|Yes| End(["Return ways[V-1]"])
 ```
 
 ---
