@@ -37,17 +37,22 @@
 flowchart TD
     Start("[Start]") --> Init["Init res='', freq[26]=0, queue q"]
     Init --> Loop{For each char c in s}
-    Loop --> Inc["freq[c - 'a']++"]
-    Inc --> Push[q.push(c)]
-    Push --> Check{While q.front is repeating}
-    Check -->|freq > 1| Pop[q.pop]
+    
+    Loop -->|Next Char| Inc["freq[c - 'a']++"]
+    Inc --> Push["q.push(c)"]
+    
+    Push --> Check{While q is not empty\nand q.front is repeating}
+    
+    Check -->|freq > 1| Pop["q.pop()"]
     Pop --> Check
-    Check -->|freq == 1| Found["res += q.front"]
+    
+    Check -->|freq == 1| Found["res += q.front()"]
     Check -->|q is empty| Empty["res += '#'"]
-    Found --> Next[Next Char]
-    Empty --> Next[Next Char]
-    Next --> Loop
-    Loop -->|End| Finish("[Return res]")
+    
+    Found --> Loop
+    Empty --> Loop
+    
+    Loop -->|Stream Ended| Finish("[Return res]")
 ```
 
 ---
